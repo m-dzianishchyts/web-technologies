@@ -1,0 +1,16 @@
+.header, .footer, .main {
+    max-width: 100%;
+
+}
+
+.header {
+}
+
+.footer {
+}
+
+.header__area-logo img {
+    max-width: 100%;
+    width: auto;
+    height: 150px;
+}
