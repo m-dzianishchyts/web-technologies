@@ -1,0 +1,79 @@
+@import "variables.scss";
+
+.works {
+    &__item {
+        padding: 0px 0px 30px 0px;
+        margin: 0px 0px 30px 0px;
+        border-bottom: 1px solid #e0e0e0;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        @media (min-width: $md3+px) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &__image {
+        display: block;
+        flex: 0 0 250px;
+        border-radius: 6px;
+        min-height: 180px;
+        overflow: hidden;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 17px 0px;
+            padding: 0px 0px 60% 0px;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        @media (min-width: $md3+px) {
+            padding: 0px 0px 0px 18px;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        color: inherit;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 44 / 30 * 100%;
+        margin: 0px 0px 15px 0px;
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+        }
+        transition: color 0.3s ease 0s;
+        &:hover {
+            color: $ruby;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__year {
+        display: inline-flex;
+        background-color: $dateBackground;
+        border-radius: 16px;
+        height: 25px;
+        padding: 0px 10px;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    &__category {
+        color: $lightGray;
+        font-size: 20px;
+        margin: 0px 0px 0px 25px;
+    }
+
+    &__text {
+    }
+}
