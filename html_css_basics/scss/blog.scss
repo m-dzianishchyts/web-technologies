@@ -1,0 +1,76 @@
+@import "style-base.scss";
+@import "header.scss";
+@import "footer.scss";
+
+.blog {
+    padding-bottom: 50px;
+    @media (max-width: $md3+px) {
+        padding-bottom: 30px;
+    }
+    &__container {
+    }
+
+    &__title {
+        margin: 0px 0px 50px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__article-name {
+        display: inline-block;
+        margin: 0px 0px 10px 0px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 44 / 30 * 100%;
+        transition: color 0.3s ease 0s;
+        color: inherit;
+        @media (min-width: $md2+px) {
+            &:hover {
+                color: $ruby;
+            }
+        }
+        @media (max-width: $md3+px) {
+            font-size: 26px;
+        }
+    }
+
+    &__items {
+    }
+
+    &__item {
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        @media (max-width: $md3+px) {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        font-size: 20px;
+        margin: 0px 0px 10px 0px;
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+
+    &__date {
+    }
+
+    &__separator {
+        margin: 0px 15px;
+    }
+
+    &__category {
+        color: $lightGray;
+    }
+
+    &__text {
+    }
+}
