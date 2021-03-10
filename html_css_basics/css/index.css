@@ -241,6 +241,9 @@ body {
 .menu__link:hover {
 	color: #ff6464;
 }
+.menu__active {
+	color: #ff6464;
+}
 
 .works__item {
 	padding: 0px 0px 30px 0px;
