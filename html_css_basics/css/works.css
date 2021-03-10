@@ -1,191 +1,74 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap");
-* {
-	padding: 0;
-	margin: 0;
-	border: 0;
+.works__item {
+	padding: 0px 0px 30px 0px;
+	margin: 0px 0px 30px 0px;
+	border-bottom: 1px solid #e0e0e0;
 }
-
-*, *:before, *:after {
-	box-sizing: border-box;
+.works__item:last-child {
+	margin-bottom: 0px;
 }
-
-:focus, :active {
-	outline: none;
+@media (min-width: 767.98px) {
+	.works__item {
+		display: flex;
+		align-items: flex-start;
+	}
 }
-
-a:focus, a:active {
-	outline: none;
-}
-
-nav, footer, header, aside {
+.works__image {
 	display: block;
-}
-
-html, body {
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-	font-family: inherit;
-}
-
-input::-ms-clear {
-	display: none;
-}
-
-button {
-	cursor: pointer;
-}
-
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-}
-
-a, a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-ul li {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-size: inherit;
-	font-weight: inherit;
-}
-
-@font-face {
-	font-family: "icons-font";
-	src: url("../fonts/icons-font.eot?hqieia");
-	src: url("../fonts/icons-font.eot?hqieia#iefix") format("embedded-opentype"), url("../fonts/icons-font.ttf?hqieia") format("truetype"), url("../fonts/icons-font.woff?hqieia") format("woff"), url("../fonts/icons-font.svg?hqieia#icons-font") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
-[class^=icon-]::before,
-[class*=" icon-"]::before {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: "icons-font" !important;
-	speak: never;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-github:before {
-	content: "";
-}
-
-.icon-telegram:before {
-	content: "";
-}
-
-.icon-vk:before {
-	content: "";
-}
-
-body {
-	font-family: "Heebo";
-	color: #21243d;
-}
-
-.wrapper {
-	width: 100%;
-	min-height: 100%;
+	flex: 0 0 250px;
+	border-radius: 6px;
+	min-height: 180px;
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-}
-
-._container {
-	max-width: 856px;
-	margin: 0px auto;
-}
-@media (max-width: 991.98px) {
-	._container {
-		max-width: 750px;
-	}
 }
 @media (max-width: 767.98px) {
-	._container {
-		max-width: none;
-		padding: 0px 10px;
+	.works__image {
+		margin: 0px 0px 17px 0px;
+		padding: 0px 0px 60% 0px;
 	}
 }
-
-.title {
-	font-size: 44px;
+.works__body {
+	flex: 1 1 auto;
+}
+@media (min-width: 767.98px) {
+	.works__body {
+		padding: 0px 0px 0px 18px;
+	}
+}
+.works__title {
+	display: inline-block;
+	color: inherit;
+	font-size: 30px;
 	font-weight: 700;
-	line-height: 136.3636363636%;
+	line-height: 146.6666666667%;
+	margin: 0px 0px 15px 0px;
+	transition: color 0.3s ease 0s;
 }
 @media (max-width: 767.98px) {
-	.title {
-		font-size: 32px;
+	.works__title {
+		font-size: 24px;
 	}
 }
-
-.text {
-	font-size: 16px;
-	line-height: 143.75%;
+.works__title:hover {
+	color: #ff6464;
 }
-
-.button {
-	background-color: #ff6464;
-	border-radius: 2px;
-	font-weight: 500;
-	font-size: 20px;
-	color: #fff;
-	line-height: 145%;
-	height: 47px;
+.works__info {
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 15px 0px;
+}
+.works__year {
 	display: inline-flex;
+	background-color: #142850;
+	border-radius: 16px;
+	height: 25px;
+	padding: 0px 10px;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	padding: 0px 20px;
-	transition: background-color 0.3s ease 0s;
+	color: #fff;
+	font-weight: 900;
+	font-size: 18px;
 }
-.button:hover {
-	background-color: #00a8cc;
-}
-
-.page {
-	flex: 1 1 auto;
-	padding: 90px 0px 0px 0px;
-}
-@media (max-width: 767.98px) {
-	.page {
-		padding: 35px 0px 0px 0px;
-	}
-}
-
-.posts-title {
-	font-size: 22px;
-}
-@media (max-width: 767.98px) {
-	.posts-title {
-		text-align: center;
-		font-size: 18px;
-	}
+.works__category {
+	color: #8695a4;
+	font-size: 20px;
+	margin: 0px 0px 0px 25px;
 }
