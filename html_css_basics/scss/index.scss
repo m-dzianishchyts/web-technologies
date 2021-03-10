@@ -1,0 +1,200 @@
+@import "style-min.scss";
+@import "header.scss";
+@import "works.scss";
+@import "footer.scss";
+
+.welcome {
+    padding: 30px 0px 70px 0px;
+    @media (max-width: $md2+px) {
+        padding: 0px 0px 70px 0px;
+    }
+    @media (max-width: $md3+px) {
+        padding: 0px 0px 60px 0px;
+    }
+
+    &__container {
+        display: flex;
+        @media (max-width: $md3+px) {
+            text-align: center;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        align-items: flex-start;
+        padding: 20px 110px 0px 0px;
+        flex: 1 1 auto;
+        *:last-child {
+            margin-bottom: 0px;
+        }
+        @media (max-width: $md2+px) {
+            padding: 20px 50px 0px 0px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 0px 0px 0px 0px;
+        }
+    }
+
+    &__title {
+        margin: 0px 0px 25px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__text {
+        margin: 0px 0px 35px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 25px 0px;
+            padding: 0px 15px 0px 15px;
+        }
+    }
+
+    &__button {
+        margin: 0px 0px 25px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__logo {
+        flex: 0 0 250px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 5px $lightBlue;
+        height: 250px;
+        width: 250px;
+        text-align: center;
+        img {
+            max-width: 90%;
+            padding: 20px 0px 0px 0px;
+        }
+        @media (max-width: $md3+px) {
+            width: 170px;
+            max-height: 170px;
+            margin: 0px 0px 40px 0px;
+        }
+    }
+}
+
+.recent-posts {
+    background-color: $lightBlue;
+    padding: 25px 0px 13px 0px;
+    @media (max-width: $md3+px) {
+        padding: 25px 0px 23px 0px;
+    }
+
+    &__container {
+    }
+
+    &__header {
+        display: flex;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__title {
+        padding: 0px 20px 0px 0px;
+        flex: 1 1 auto;
+    }
+
+    &__view-all {
+        flex: 0 0 auto;
+        font-size: 16px;
+        line-height: 23px;
+        color: $turquoise;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__items {
+        margin: 0px -10px;
+        @media (min-width: $md3+px) {
+            display: flex;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0px 10px;
+        margin: 0px 0px 17px 0px;
+    }
+
+    &__item {
+    }
+}
+
+.recent-post {
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px #bbe1fa40;
+    border-radius: 4px;
+    padding: 20px;
+    @media (max-width: $md3+px) {
+        padding: 15px;
+    }
+    *:last-child {
+        margin-bottom: 0px;
+    }
+
+    &__title {
+        display: inline-block;
+        color: inherit;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 38 / 26 * 100%;
+        transition: color 0.3s ease 0s;
+        margin: 0px 0px 17px 0px;
+        &:hover {
+            color: $ruby;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 22px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    &__info {
+        font-size: 18px;
+        line-height: 26 / 18 * 100%;
+        margin: 0px 0px 15px 0px;
+        span {
+            margin: 0px 10px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    &__text {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+.featured-works {
+    padding: 30px 0px 80px 0px;
+    @media (max-width: $md3+px) {
+        padding-bottom: 30px;
+    }
+
+    &__container {
+    }
+
+    &__title {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__items {
+        @media (max-width: $md3+px) {
+            display: flex;
+            overflow: auto;
+        }
+        .works__item {
+            @media (max-width: $md3+px) {
+                flex: 0 0 90%;
+                margin: 0px 15px 0px 0px;
+            }
+        }
+    }
+}
