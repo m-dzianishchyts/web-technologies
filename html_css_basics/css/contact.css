@@ -390,10 +390,16 @@ body {
 }
 .email-message__form {
 	padding: 0px 20px;
+	margin: 0px 0px 30px 0px;
 }
 @media (max-width: 767.98px) {
 	.email-message__form {
 		padding: 0px 10px;
+	}
+}
+@media (max-width: 767.98px) {
+	.email-message__form {
+		margin: 0px 0px 15px 0px;
 	}
 }
 .email-message__label, .email-message__text-field, .email-message__text-area {
@@ -424,12 +430,6 @@ body {
 .email-message__button-container {
 	display: flex;
 	justify-content: center;
-	margin: 0px 0px 30px 0px;
-}
-@media (max-width: 767.98px) {
-	.email-message__button-container {
-		margin: 0px 0px 15px 0px;
-	}
 }
 .email-message__submit-button {
 	display: block;
