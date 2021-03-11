@@ -62,6 +62,13 @@
 			max-width: 100%;
 			margin: 0px 0px 20px 0px;
 		}
+		a {
+			font-weight: 500;
+			color: inherit;
+			&:hover {
+				color: $ruby;
+			}
+		}
 	}
 }
 

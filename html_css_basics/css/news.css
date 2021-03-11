@@ -73,14 +73,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
 	font-family: "icons-font";
-	src: url("../fonts/icons-font.eot?hqieia");
-	src: url("../fonts/icons-font.eot?hqieia#iefix") format("embedded-opentype"), url("../fonts/icons-font.ttf?hqieia") format("truetype"), url("../fonts/icons-font.woff?hqieia") format("woff"), url("../fonts/icons-font.svg?hqieia#icons-font") format("svg");
+	src: url("../fonts/icons-font.eot?ogfcew");
+	src: url("../fonts/icons-font.eot?ogfcew#iefix") format("embedded-opentype"), url("../fonts/icons-font.ttf?ogfcew") format("truetype"), url("../fonts/icons-font.woff?ogfcew") format("woff"), url("../fonts/icons-font.svg?ogfcew#icons-font") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
 }
-[class^=icon-]::before,
-[class*=" icon-"]::before {
+[class^=icon-]::before, [class*=" icon-"]::before {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "icons-font" !important;
 	speak: never;
@@ -94,16 +93,16 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github:before {
-	content: "";
-}
-
 .icon-telegram:before {
 	content: "";
 }
 
-.icon-vk:before {
-	content: "";
+.icon-instagram:before {
+	content: "";
+}
+
+.icon-youtube:before {
+	content: "";
 }
 
 body {
@@ -223,13 +222,16 @@ body {
 	margin: 0px auto;
 }
 .menu__list {
-	height: 82px;
+	min-height: 82px;
 	align-items: center;
 	padding: 10px 0px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-end;
 }
 .menu__list li {
+	display: inline-block;
+	padding: 10px 0px;
 	margin-left: 33px;
 }
 .menu__link {
@@ -257,23 +259,23 @@ body {
 .footer__social {
 	margin: 0px 0px 25px 0px;
 }
-.blog {
+.news {
 	padding-bottom: 50px;
 }
 @media (max-width: 767.98px) {
-	.blog {
+	.news {
 		padding-bottom: 30px;
 	}
 }
-.blog__title {
+.news__title {
 	margin: 0px 0px 50px 0px;
 }
 @media (max-width: 767.98px) {
-	.blog__title {
+	.news__title {
 		margin: 0px 0px 20px 0px;
 	}
 }
-.blog__article-name {
+.news__article-name {
 	display: inline-block;
 	margin: 0px 0px 10px 0px;
 	font-size: 30px;
@@ -283,42 +285,42 @@ body {
 	color: inherit;
 }
 @media (min-width: 991.98px) {
-	.blog__article-name:hover {
+	.news__article-name:hover {
 		color: #ff6464;
 	}
 }
 @media (max-width: 767.98px) {
-	.blog__article-name {
+	.news__article-name {
 		font-size: 26px;
 	}
 }
-.blog__item {
+.news__item {
 	border-bottom: 1px solid #e0e0e0;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 }
-.blog__item:last-child {
+.news__item:last-child {
 	margin-bottom: 0px;
 }
 @media (max-width: 767.98px) {
-	.blog__item {
+	.news__item {
 		padding-bottom: 25px;
 		margin-bottom: 25px;
 	}
 }
-.blog__info {
+.news__info {
 	display: flex;
 	font-size: 20px;
 	margin: 0px 0px 10px 0px;
 }
 @media (max-width: 767.98px) {
-	.blog__info {
+	.news__info {
 		font-size: 16px;
 	}
 }
-.blog__separator {
+.news__separator {
 	margin: 0px 15px;
 }
-.blog__category {
+.news__category {
 	color: #8695a4;
 }

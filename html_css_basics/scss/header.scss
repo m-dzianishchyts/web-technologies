@@ -16,12 +16,15 @@
     &__body {
     }
     &__list {
-        height: 82px;
+        min-height: 82px;
         align-items: center;
         padding: 10px 0px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
         li {
+            display: inline-block;
+            padding: 10px 0px;
             margin-left: 33px;
         }
     }
