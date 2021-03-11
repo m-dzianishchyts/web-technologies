@@ -1,0 +1,139 @@
+@import "style-base.scss";
+@import "header.scss";
+@import "footer.scss";
+
+.contacts {
+	padding: 30px 0px 70px 0px;
+    @media (max-width: $md2+px) {
+        padding: 0px 0px 70px 0px;
+    }
+    @media (max-width: $md3+px) {
+        padding: 0px 0px 60px 0px;
+    }
+
+	&__container {
+		display: flex;
+        @media (max-width: $md3+px) {
+            text-align: center;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+	}
+
+	&__content {
+		align-items: flex-start;
+        padding: 20px 110px 0px 0px;
+        flex: 1 1 auto;
+        *:last-child {
+            margin-bottom: 0px;
+        }
+        @media (max-width: $md2+px) {
+            padding: 20px 50px 0px 0px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 0px 0px 0px 0px;
+        }
+	}
+
+	&__title {
+		margin: 0px 0px 25px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 20px 0px;
+        }
+	}
+
+	&__text {
+		margin: 0px 0px 35px 0px;
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 25px 0px;
+            padding: 0px 15px 0px 15px;
+			text-align: left;
+        }
+		p {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	&__location {
+		flex: 0 0 500px;
+		display: flex;
+		justify-items: center;
+		overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 5px $lightBlue;
+        height: 500px;
+        width: 500px;
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+		@media (max-width: $md2+px) {
+			max-width: 400px;
+			max-height: 400px;
+		}
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 40px 0px;
+        }
+		@media (max-width: $md4+px) {
+            max-width: 300px;
+            max-height: 300px;
+            margin: 0px 0px 40px 0px;
+        }
+	}
+}
+
+.email-message {
+	display: flex;
+
+	&__content {
+		width: 100%;
+	}
+
+	&__title {
+		justify-self: left;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__form {
+	}
+
+	&__label, &__text-field, &__text-area {
+		width: 100%;
+		display: block;
+	}
+
+	&__label {
+		margin: 0px 0px 5px 0px;
+	}
+
+	&__text-field, &__text-area {
+		background-color: #e0e0e0;
+		font-size: 16px;
+		line-height: 26 / 16 * 100%;
+		padding: 10px 10px;
+		margin: 0px 0px 15px 0px;
+  		color: inherit;
+  		border: none;
+  		border-radius: 4px;
+	}
+
+	&__text-field {
+		
+	}
+
+	&__text-area {
+		margin: 0px 0px 30px 0px;
+		height: 200px;
+	}
+
+	&__button-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__submit-button {
+		display: block;
+	}
+}
+
+
