@@ -259,69 +259,77 @@ body {
 .footer__social {
 	margin: 0px 0px 25px 0px;
 }
-.contacts {
+.contact {
 	padding: 30px 0px 70px 0px;
 }
 @media (max-width: 991.98px) {
-	.contacts {
+	.contact {
 		padding: 0px 0px 70px 0px;
 	}
 }
 @media (max-width: 767.98px) {
-	.contacts {
+	.contact {
 		padding: 0px 0px 60px 0px;
 	}
 }
-.contacts__container {
+.contact__container {
 	display: flex;
 }
 @media (max-width: 767.98px) {
-	.contacts__container {
+	.contact__container {
 		text-align: center;
 		flex-direction: column-reverse;
 		align-items: center;
 	}
 }
-.contacts__content {
+.contact__content {
 	align-items: flex-start;
 	padding: 20px 110px 0px 0px;
 	flex: 1 1 auto;
 }
-.contacts__content *:last-child {
+.contact__content *:last-child {
 	margin-bottom: 0px;
 }
 @media (max-width: 991.98px) {
-	.contacts__content {
+	.contact__content {
 		padding: 20px 50px 0px 0px;
 	}
 }
 @media (max-width: 767.98px) {
-	.contacts__content {
+	.contact__content {
 		padding: 0px 0px 0px 0px;
 	}
 }
-.contacts__title {
+.contact__title {
 	margin: 0px 0px 25px 0px;
 }
 @media (max-width: 767.98px) {
-	.contacts__title {
+	.contact__title {
 		margin: 0px 0px 20px 0px;
 	}
 }
-.contacts__text {
+.contact__text {
 	margin: 0px 0px 35px 0px;
 }
 @media (max-width: 767.98px) {
-	.contacts__text {
+	.contact__text {
 		margin: 0px 0px 25px 0px;
 		padding: 0px 15px 0px 15px;
 		text-align: left;
 	}
 }
-.contacts__text p {
+.contact__contact-way {
+	font-size: 18px;
+	font-weight: 500;
 	margin: 0px 0px 10px 0px;
+	color: inherit;
 }
-.contacts__location {
+@media (max-width: 767.98px) {
+	.contact__contact-way {
+		font-size: 16px;
+	}
+}
+.contact__location {
 	flex: 0 0 500px;
 	display: flex;
 	justify-items: center;
@@ -332,22 +340,22 @@ body {
 	width: 500px;
 	text-align: center;
 }
-.contacts__location img {
+.contact__location img {
 	max-width: 100%;
 }
 @media (max-width: 991.98px) {
-	.contacts__location {
+	.contact__location {
 		max-width: 400px;
 		max-height: 400px;
 	}
 }
 @media (max-width: 767.98px) {
-	.contacts__location {
+	.contact__location {
 		margin: 0px 0px 40px 0px;
 	}
 }
 @media (max-width: 479.98px) {
-	.contacts__location {
+	.contact__location {
 		max-width: 300px;
 		max-height: 300px;
 		margin: 0px 0px 40px 0px;
@@ -356,13 +364,37 @@ body {
 
 .email-message {
 	display: flex;
+	background-color: #edf7fa;
+}
+.email-message__container {
+	width: 100%;
 }
 .email-message__content {
 	width: 100%;
 }
 .email-message__title {
 	justify-self: left;
-	margin: 0px 0px 30px 0px;
+	padding: 0px 0px 0px 20px;
+	margin: 20px 0px;
+}
+@media (max-width: 991.98px) {
+	.email-message__title {
+		margin: 15px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.email-message__title {
+		padding: 0px 0px 0px 10px;
+		margin: 10px 0px;
+	}
+}
+.email-message__form {
+	padding: 0px 20px;
+}
+@media (max-width: 767.98px) {
+	.email-message__form {
+		padding: 0px 10px;
+	}
 }
 .email-message__label, .email-message__text-field, .email-message__text-area {
 	width: 100%;
@@ -372,7 +404,6 @@ body {
 	margin: 0px 0px 5px 0px;
 }
 .email-message__text-field, .email-message__text-area {
-	background-color: #e0e0e0;
 	font-size: 16px;
 	line-height: 162.5%;
 	padding: 10px 10px;
@@ -385,9 +416,20 @@ body {
 	margin: 0px 0px 30px 0px;
 	height: 200px;
 }
+@media (max-width: 767.98px) {
+	.email-message__text-area {
+		margin: 0px 0px 15px 0px;
+	}
+}
 .email-message__button-container {
 	display: flex;
 	justify-content: center;
+	margin: 0px 0px 30px 0px;
+}
+@media (max-width: 767.98px) {
+	.email-message__button-container {
+		margin: 0px 0px 15px 0px;
+	}
 }
 .email-message__submit-button {
 	display: block;
