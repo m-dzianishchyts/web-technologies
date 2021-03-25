@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.header {
+    &__content {
+        max-width: 1098px;
+        padding: 0px 33px;
+        margin: 0px auto;
+    }
+    &__menu {
+    }
+}
+
+.menu {
+    &__icon {
+    }
+    &__body {
+    }
+    &__list {
+        min-height: 82px;
+        align-items: center;
+        padding: 10px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        li {
+            display: inline-block;
+            padding: 10px 0px;
+            margin-left: 33px;
+        }
+    }
+
+    &__link {
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        transition: color 0.3s ease 0s;
+        &:hover {
+            color: $ruby;
+        }
+    }
+
+    &__active {
+        color: $ruby;
+    }
+}

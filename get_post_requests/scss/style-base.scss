@@ -1,0 +1,109 @@
+@import "style-reset.scss";
+@import "icons-font.scss";
+@import "variables.scss";
+
+body {
+    font-family: $fontFamily;
+    color: $darkBlue;
+}
+
+.display-none {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0px auto;
+    @media (max-width: $md2 + px) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3 + px) {
+        max-width: none;
+        padding: 0px 10px;
+    }
+}
+
+.title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 60 / 44 * 100%;
+    @media (max-width: $md3+px) {
+        font-size: 32px;
+    }
+}
+
+.text {
+    font-size: 16px;
+    line-height: 23 / 16 * 100%;
+}
+
+.button {
+    background-color: $ruby;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    line-height: 29 / 20 * 100%;
+    height: 47px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px;
+    transition: background-color 0.3s ease 0s;
+    &:hover {
+        background-color: #00a8cc;
+    }
+}
+
+.page {
+    flex: 1 1 auto;
+    padding: 90px 0px 0px 0px;
+    @media (max-width: $md3+px) {
+        padding: 35px 0px 0px 0px;
+    }
+}
+
+.posts-title {
+    font-size: 22px;
+    @media (max-width: $md3+px) {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        transition: color 0.3s ease 0s;
+        margin: 0px 17px;
+        font-size: 30px;
+        color: inherit;
+        &:hover {
+            color: $ruby;
+        }
+    }
+}
