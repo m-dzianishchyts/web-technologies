@@ -1,4 +1,8 @@
-<?php 
+<?php
+// Function filters values which are integer
+// and round floating-point number to precision
+// of 2 digits after the decimal point.
+// All other lines will be formatted to uppercase. 
 function filter($values) {
 	$result = [];
 	foreach ($values as $value) {

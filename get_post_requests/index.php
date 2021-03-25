@@ -10,10 +10,11 @@
     <title>Home - Topaz Group</title>
 </head>
 
+<!-- Get active section and content of the input form. -->
 <?php
-    $section = $_GET["section"];
+    $active_section = $_GET["section"];
     $input_str = $_GET["input"];
-    include "php/script.php";
+    include "php/script.php"; // filter function
 ?>
 
 <body>
@@ -23,10 +24,11 @@
                 <div class="header__menu menu">
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li><a href="index.php?section=home" class="menu__link <?php if ($section == "home") echo "menu__active"?>">Home</a></li>
-                            <li><a href="index.php?section=works" class="menu__link <?php if ($section == "works") echo "menu__active"?>">Works</a></li>
-                            <li><a href="index.php?section=news" class="menu__link <?php if ($section == "news") echo "menu__active"?>">News</a></li>
-                            <li><a href="index.php?section=contact" class="menu__link <?php if ($section == "contact") echo "menu__active"?>">Contact</a></li>
+                        <!-- A certain section will be highlighted depending on the $active_section value from GET request. -->
+                            <li><a href="index.php?section=home" class="menu__link <?php if ($active_section == "home") echo "menu__active"?>">Home</a></li>
+                            <li><a href="index.php?section=works" class="menu__link <?php if ($active_section == "works") echo "menu__active"?>">Works</a></li>
+                            <li><a href="index.php?section=news" class="menu__link <?php if ($active_section == "news") echo "menu__active"?>">News</a></li>
+                            <li><a href="index.php?section=contact" class="menu__link <?php if ($active_section == "contact") echo "menu__active"?>">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -39,7 +41,9 @@
                     <input type="text" placeholder="Your crazy input..." name="input" value="<?= htmlentities($_GET['input'],ENT_QUOTES); ?>" class="form__input">
                     <input type="submit" value="Enter" class="form__submit">
                 </form>
+                <!-- Render tables only if input form contains something. -->
                 <?php if (isset($input_str)): ?>
+                    <!-- Parse input form content, filter values and sort them lexicographically. -->
                     <?php 
                         $input_list = preg_split("/,\s*/", $input_str, 0, PREG_SPLIT_NO_EMPTY);
                         $filtered_list = filter($input_list);
@@ -50,6 +54,7 @@
                             <tr class="table__row">
                                 <th class="table__header">Input</th>
                             </tr>
+                            <!-- Place each input value in it's table row. -->
                             <?php foreach ($input_list as $input_value): ?>
                                 <tr class="table__row">
                                     <td class="table__data"><?php echo $input_value ?></td>
@@ -60,6 +65,7 @@
                             <tr class="table__row">
                                 <th class="table__header">Output</th>
                             </tr>
+                            <!-- Place each filtered value in it's table row. -->
                             <?php foreach ($filtered_list as $filtered_value): ?>
                                 <tr class="table__row">
                                     <td class="table__data"><?php echo $filtered_value ?></td>
